@@ -15,8 +15,7 @@
                 $count = $user->statuses_count;
             }
 
-            $tweets = $connection->get('statuses/user_timeline', ['count' => $count, 'exclude_replies' => true]);
-
+            $tweets = $connection->get('statuses/user_timeline', ['count' => $count , 'exclude_replies' => true]);
 
 
             $user_dp = $user->profile_image_url;
@@ -44,16 +43,6 @@
   <title>Home</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-<<<<<<< HEAD
-  //<link rel="stylesheet" href="css/bootstrap.min.css">
-  //<script src="js/jquery.min.js"></script>
-  //<script src="js/bootstrap.min.js"></script>
-
-  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-
-=======
   <link rel="stylesheet" href="css/bootstrap.min.css">
   <script src="js/jquery.min.js"></script>
   <script src="js/bootstrap.min.js"></script>
@@ -62,7 +51,6 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   -->
->>>>>>> 59091072eded4b7f57c9c77a54c8b0d73d00eb2a
   <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
 
   <style>
