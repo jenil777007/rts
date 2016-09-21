@@ -136,33 +136,18 @@
   <div id="myCarousel" class="col-sm-6 slide c1" data-ride="carousel">
 
     <ol class="carousel-indicators">
-      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-      <li data-target="#myCarousel" data-slide-to="1"></li>
-      <li data-target="#myCarousel" data-slide-to="2"></li>
-      <li data-target="#myCarousel" data-slide-to="3"></li>
-      <li data-target="#myCarousel" data-slide-to="4"></li>
-      <li data-target="#myCarousel" data-slide-to="5"></li>
-      <li data-target="#myCarousel" data-slide-to="6"></li>
-      <li data-target="#myCarousel" data-slide-to="7"></li>
-      <li data-target="#myCarousel" data-slide-to="8"></li>
-      <li data-target="#myCarousel" data-slide-to="9"></li>
+
+    <?php for($i=0;$i<10;$i++){ ?>
+
+            <li data-target="#myCarousel" data-slide-to= <?php echo $i; ?> class="active"> TWEET </li>
+
+    <?php } ?>
+
     </ol>
 
     <div class="carousel-inner" role="listbox">
       <div class="item active">
-        <img src="" alt="Chania">
-      </div>
 
-      <div class="item">
-        <img src="" alt="Chania">
-      </div>
-
-      <div class="item">
-        <img src="" alt="Flower">
-      </div>
-
-      <div class="item">
-        <img src="" alt="Flower">
       </div>
     </div>
 
@@ -178,46 +163,16 @@
 
     <div class="col-sm-3 d2">
         <label>Followers</label>
+
+        <?php for($i=0;$i<10;$i++){ ?>
+
         <div class="subd">
             <img class="col-sm-3 img-circle insubd" style="height:30px; width:10px;"></img>
             <label class="col-sm-9 insubd">user</label>
         </div>
-        <div class="subd">
-            <img class="col-sm-3 img-circle insubd" style="height:30px; width:10px;"></img>
-            <label class="col-sm-9 insubd">user</label>
-        </div>
-        <div class="subd">
-            <img class="col-sm-3 img-circle insubd" style="height:30px; width:10px;"></img>
-            <label class="col-sm-9 insubd">user</label>
-        </div>
-        <div class="subd">
-            <img class="col-sm-3 img-circle insubd" style="height:30px; width:10px;"></img>
-            <label class="col-sm-9 insubd">user</label>
-        </div>
-        <div class="subd">
-            <img class="col-sm-3 img-circle insubd" style="height:30px; width:10px;"></img>
-            <label class="col-sm-9 insubd">user</label>
-        </div>
-        <div class="subd">
-            <img class="col-sm-3 img-circle insubd" style="height:30px; width:10px;"></img>
-            <label class="col-sm-9 insubd">user</label>
-        </div>
-        <div class="subd">
-            <img class="col-sm-3 img-circle insubd" style="height:30px; width:10px;"></img>
-            <label class="col-sm-9 insubd">user</label>
-        </div>
-        <div class="subd">
-            <img class="col-sm-3 img-circle insubd" style="height:30px; width:10px;"></img>
-            <label class="col-sm-9 insubd">user</label>
-        </div>
-        <div class="subd">
-            <img class="col-sm-3 img-circle insubd" style="height:30px; width:10px;"></img>
-            <label class="col-sm-9 insubd">user</label>
-        </div>
-        <div class="subd">
-            <img class="col-sm-3 img-circle insubd" style="height:30px; width:10px;"></img>
-            <label class="col-sm-9 insubd">user</label>
-        </div>
+
+        <?php } ?>
+
       </div>
 
 </div>
