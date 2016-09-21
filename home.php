@@ -183,6 +183,7 @@
 
       </div>
 
+    <button type="button" class="btn btn-primary"><a href="genpdf.php">Generate PDF of tweets</a></button>
 </div>
 
 </body>
