@@ -1,9 +1,9 @@
 # rtCamp Twitter Assignment
 
-by Jenil Calcuttawala<br />
-13BCE015<br />
-Institute of Technology<br />
-Nirma University<br />
+by Jenil Calcuttawala,<br />
+13BCE015,<br />
+Institute of Technology,<br />
+Nirma University,<br />
 Ahmedabad.<br />
 
 This assignment is not completed yet. (21/09/2016 7:00 PM)<br />
