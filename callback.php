@@ -23,7 +23,7 @@
 
         $_SESSION['access_token'] = $token;
 
-        header('Location: ' . 'https://jrtcamp.herokuapp.com/home.php');
+        header('Location: ' . 'http://127.0.0.1/rts/home.php');
 
     }else{
 

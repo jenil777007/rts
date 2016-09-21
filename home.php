@@ -10,16 +10,6 @@
             $connection = new TwitterOAuth($_SESSION['consumer_key'], $_SESSION['consumer_secret'], $access_token['oauth_token'], $access_token['oauth_token_secret']);
             $user = $connection->get("account/verify_credentials");
 
-            $count = 10;
-            if($user->statuses_count < 10){
-                $count = $user->statuses_count;
-            }
-
-            $tweets = $connection->get('statuses/user_timeline', ['count' => $count , 'exclude_replies' => true]);
-            echo <pre>
-            print_r($tweets);
-            echo <pre>
-
             $user_dp = $user->profile_image_url;
             $user_cover = $user->profile_banner_url;
             $user_name = $user->name;
@@ -28,12 +18,21 @@
             $user_friends_count = $user->friends_count;
             $user_tweets_count = $user->statuses_count;
 
-            $cursor = -1;
-
-            while($cursor != 0){
-                   $ids = $connection->get("followers/ids", array("screen_name" => $user_id, "cursor" => $cursor));
-                   $cursor = $ids->next_cursor;
+            $count = 10;
+            if($user->statuses_count < 10){
+                $count = $user->statuses_count;
             }
+
+            $tweets = $connection->get('statuses/user_timeline', ['count' => $count , 'exclude_replies' => true]);
+            //echo "<pre>";
+            //print_r($tweets);
+            //echo "<pre>";
+
+            $followers_ids = $connection->get('followers/list', ['count' => $count ]);
+            //echo "<pre>";
+            //print_r($followers_ids);
+            //echo "<pre>";
+
      }
 
 ?>
@@ -82,7 +81,7 @@
       }
       .d2{
               background-color: #e0e0eb;
-              height: 500px;
+              height: 527px;
               width: 250px;
               border: 1px solid black;
               border-radius: 10px;
@@ -107,11 +106,10 @@
     </div>
     <ul class="nav navbar-nav">
       <li class="active"><a href="#">Home</a></li>
-      <li><a href="#">Page 1</a></li>
-      <li><a href="#">Page 2</a></li>
+      <li><a href="http://about.me/jenil777007">About Me</a></li>
     </ul>
     <ul class="nav navbar-nav navbar-right">
-      <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Logout</a></li>
+      <li><a href="logout.php"><span class="glyphicon glyphicon-log-in"></span> Logout</a></li>
     </ul>
   </div>
 </nav>
@@ -135,22 +133,31 @@
 
   <div id="myCarousel" class="col-sm-6 slide c1" data-ride="carousel">
 
-    <ol class="carousel-indicators">
-
-    <?php for($i=0;$i<10;$i++){ ?>
-
-            <li data-target="#myCarousel" data-slide-to= <?php echo $i; ?> class="active"> TWEET </li>
-
-    <?php } ?>
-
-    </ol>
-
     <div class="carousel-inner" role="listbox">
-      <div class="item active">
+        <?php for($i=0;$i<10;$i++){ ?>
 
-      </div>
+                <div class="item <?php echo ($i == 0) ? 'active' : ''; ?>">
+                    <div class="row">
+                        <div class="col-sm-2">
+                            <img src="<?php echo $user_dp; ?>" class="img-rounded" alt="User Profile Pic" width="50" height="50" style="margin-top: 5px; margin-bottom: 5px; border: 1px solid black;">
+                        </div>
+                        <div class="col-sm-2">
+                            <label> <?php echo $user_name; ?> </label>
+                        </div>
+                        <div class="col-sm-2">
+                            <label>@<?php echo $user_id; ?> </label>
+                        </div>
+                        <div class="col-sm-4">
+                            <label> <?php echo $tweets[$i]-> created_at; ?> </label><br><br>
+                        </div>
+                    </div><br><br>
+                    <?php echo $tweets[$i]-> text; ?>
+
+                </div>
+
+            <?php } ?>
     </div>
-
+<!--
     <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
       <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
       <span class="sr-only">Previous</span>
@@ -158,17 +165,18 @@
     <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
       <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
       <span class="sr-only">Next</span>
-    </a>
+    </a>-->
     </div>
 
     <div class="col-sm-3 d2">
-        <label>Followers</label>
+        <center><label>Followers</label></center>
 
-        <?php for($i=0;$i<10;$i++){ ?>
+        <?php for($i=0;$i<10;$i++){
 
+        ?>
         <div class="subd">
-            <img class="col-sm-3 img-circle insubd" style="height:30px; width:10px;"></img>
-            <label class="col-sm-9 insubd">user</label>
+            <img src="<?php echo $followers_ids-> users[$i]-> profile_image_url; ?>" class="col-sm-3 img-circle insubd" style="height:30px; width:10px;"></img>
+            <label class="col-sm-9 insubd"><?php echo $followers_ids-> users[$i]-> screen_name; ?></label>
         </div>
 
         <?php } ?>
