@@ -16,8 +16,9 @@
             }
 
             $tweets = $connection->get('statuses/user_timeline', ['count' => $count , 'exclude_replies' => true]);
-
+            echo <pre>
             print_r($tweets);
+            echo <pre>
 
             $user_dp = $user->profile_image_url;
             $user_cover = $user->profile_banner_url;
