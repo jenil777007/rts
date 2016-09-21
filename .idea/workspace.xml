@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="92b9b167-8864-4ba8-b44f-c6c988197055" name="Default" comment="">
+    <list default="true" id="92b9b167-8864-4ba8-b44f-c6c988197055" name="Default" comment="added heroku callback">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.php" afterPath="$PROJECT_DIR$/index.php" />
     </list>
     <ignored path="rts.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -207,7 +206,7 @@
       <updated>1474380122650</updated>
       <workItem from="1474380124371" duration="135000" />
       <workItem from="1474380318927" duration="1297000" />
-      <workItem from="1474426558537" duration="10139000" />
+      <workItem from="1474426558537" duration="10210000" />
     </task>
     <task id="LOCAL-00001" summary="added https dependencies">
       <created>1474464488106</created>
@@ -216,11 +215,18 @@
       <option name="project" value="LOCAL" />
       <updated>1474464488106</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="added heroku callback">
+      <created>1474466357502</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1474466357502</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="11571000" />
+    <option name="totallyTimeSpent" value="11642000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
@@ -258,7 +264,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="added https dependencies" />
-    <option name="LAST_COMMIT_MESSAGE" value="added https dependencies" />
+    <MESSAGE value="added heroku callback" />
+    <option name="LAST_COMMIT_MESSAGE" value="added heroku callback" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
