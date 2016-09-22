@@ -8,7 +8,7 @@
 
     if(!isset($_SESSION['access_token'])){
         $connection = new TwitterOAuth($_SESSION['consumer_key'], $_SESSION['consumer_secret']);
-        $request_token = $connection->oauth('oauth/request_token', array('oauth_callback' => 'http://127.0.0.1/rts/callback.php'));
+        $request_token = $connection->oauth('oauth/request_token', array('oauth_callback' => 'https://jrtcamp.herokuapp.com/callback.php'));
         $_SESSION['oauth_token'] = $request_token['oauth_token'];
         $_SESSION['oauth_token_secret'] = $request_token['oauth_token_secret'];
         $url = $connection->url('oauth/authorize', array('oauth_token' => $request_token['oauth_token']));
