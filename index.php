@@ -15,7 +15,7 @@
         echo "Generated Token URL: ".$url;
        // header('Location: '. $url);
        }else{
-            header('Location: ' . 'http://127.0.0.1/rts/home.php');
+            header('Location: ' . 'https://jrtcamp.herokuapp.com/home.php');
        }
 ?>
 
