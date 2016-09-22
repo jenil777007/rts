@@ -6,5 +6,27 @@ Institute of Technology,<br />
 Nirma University,<br />
 Ahmedabad.<br />
 
-This assignment is not completed yet. (21/09/2016 7:00 PM)<br />
-I will complete it by tomorrow. (22/09/2016 <9:00 AM)<br />
+##REPOSITORY CONTENTS<br />
+
+##Directory Contents:<br />
+css   -> It contains bootstrap css files.<br />
+fonts -> It contains fonts and glyphicons.<br />
+js    -> It contains JavaScript files.<br />
+src   -> It contains required files to work with OAuth.<br /> 
+
+#Project Files:<br />
+index.php    -> The main welcome page of the assignment.<br />
+callback.php -> To receive reply from Twitter and redirect it to home.php.<br />
+home.php     -> The main member's area.<br />
+genpdf.php   -> To generate pdf file of the latest 10 tweets done by user.<br />
+logout.php   -> To log out from current session.<br />
+
+#Libraries:<br />
+autoload.php -> It is the requirement to generate OAuth Token.<br />
+fpdf.php     -> It is the library for generating pdf files.<br />
+
+Please ignore .idea and .DS_Store file.
+
+Extras:<br />
+helveticab.php,helveticai.php ,times.php are the necessary font files which are needed if we're generating pdf.<br />
+
