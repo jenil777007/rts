@@ -25,8 +25,8 @@ logout.php   -> To log out from current session.<br />
 autoload.php -> It is the requirement to generate OAuth Token.<br />
 fpdf.php     -> It is the library for generating pdf files.<br />
 
-Please ignore .idea and .DS_Store file.
-
-Extras:<br />
+###Extras:<br />
 helveticab.php,helveticai.php ,times.php are the necessary font files which are needed if we're generating pdf.<br />
 
+
+####Please ignore .idea and .DS_Store file.
